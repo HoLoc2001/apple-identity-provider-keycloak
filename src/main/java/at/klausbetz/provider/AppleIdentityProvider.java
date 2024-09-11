@@ -169,6 +169,7 @@ public class AppleIdentityProvider extends OIDCIdentityProvider implements Socia
     }
 
     public BrokeredIdentityContext getFederatedIdentity(String userData, String response) throws JsonProcessingException {
+        logger.warn("Error response from apple: status= " + AppleIdentityProvider.this.getFederatedIdentity(response));
         BrokeredIdentityContext user = AppleIdentityProvider.this.getFederatedIdentity(response);
 
         if (userData != null) {
